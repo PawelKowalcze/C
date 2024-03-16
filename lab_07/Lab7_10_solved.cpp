@@ -12,17 +12,27 @@ using namespace std;
 int *create_and_set(size_t size, int value){
    int *array = new int[size];
    for (size_t i = 0; i < size; ++i ) {
-       array[i] = value;
-       size++;
+      array[i] = value;
+      cout << array[i] << endl;
    }
    return array;
 }
 
 int main(){
    int *tab;
+   char userInput;
+   int x = 1;
+   while(x==1) {   
+      tab = create_and_set(10, 666);
+      delete[] tab;
+      tab = create_and_set(10, 777);
+      delete[] tab;
 
-   tab = create_and_set(10, 666);
-   tab = create_and_set(10, 777);
-
-   delete[] tab;
+      //cout << "Enter q to quit the loop: \n";
+      //cin >> userInput;
+      // if (userInput == 'q'){
+      //   break;
+      // }
+      
+   }
 }

@@ -1,29 +1,23 @@
 //============================================================================
-// Name        : Lab7_6.cpp
+// Name        : Lab7_3.cpp
 // Author      : Michal Grega
 // Version     : v1.0
 // Copyright   : Copyright AGH 2017
-// Description : Functions - variable range demo
+// Description : Demonstration of calloc
 //============================================================================
 
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
-int x = 100;
-
-
-void pprint(int x) {
-    cout << "1: " << x << endl;
-    ++x;
-    cout << "2: " << x << endl;
-}
 
 int main() {
+	   long int size = 1000000;
+	   long int *p = new long int[size];
 
-	cout << x << endl;
-	int x = 6;
+	   for (int i = 0; i < size; ++i) {
+	       *(p+i) = i;
+	   }
 
-    cout << "0: " << x << endl;
-    pprint(x);
-    cout << "3: " << x << endl;
+	   delete []p;
+
 }
-
